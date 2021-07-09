@@ -1,5 +1,14 @@
 
-let message; // Обьявление переменной
-message = 'Я ж програмист'; // Инициализация переменной
+let message = {
+    name: undefined,
+    address: null,
+    age: 32,
 
-alert( message );
+}; // Обьявление переменной
+
+alert( message.name );
+
+alert( message.ABRABRA );
+
+alert( message.address );
+
