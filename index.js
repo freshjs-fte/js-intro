@@ -2,7 +2,6 @@
 /* 1 */
 const num = 2;
 const str = '3';
-const sec = num;
 
 function getSumOfTwo (num1, num2) {
     // checks
@@ -25,29 +24,12 @@ console.log(result);
 
 
 
+/* 
+    1. Функцию которая возвращает максимальное число из двух
+    2. Функцию которая возвращает минимальное число из двух
+    3. Функция которая определяет является ли число четным
 
+    (4.*) Функция которая находит корень квадратного уравнения 
+    (метод дискриминанта)
 
-
-
-
-
-
-
-
-
-/* 2 */
-const bool1 = true;
-const bool2 = true;
-
-let operation = bool1 + bool2;
-// console.log(operation)
-
-operation = bool2 - bool1;
-// console.log(operation)
-
-/* 3 */
-const string = '22.6';
-const num2 = 4.3;
-
-const sum2 = Number(string) + num2;
-// console.log(sum2);
+*/
