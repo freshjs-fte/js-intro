@@ -4,7 +4,7 @@ const num = 2;
 const str = '3';
 const sec = num;
 
-const getSumOfTwo = function (num1, num2) {
+function getSumOfTwo (num1, num2) {
     // checks
     if (isNaN(num1) || isNaN(num2)) {
         return false;
