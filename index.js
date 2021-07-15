@@ -84,6 +84,7 @@ console.log(isEven(3));
  * @returns {Number[]} Roots of quadratic equation
  */
 function solveQaudraticEquation(a, b, c) {
+    console.log(arguments)
   // checks
   // type
   if (
@@ -117,30 +118,51 @@ text += nu1m + ". Пункт " + nu1m;
 
 console.log(text);
 
+const getMonthIndex = function (monthName) {
+  let monthIndex = 0;
 
+  switch (monthName) {
+    case "January": {
+      // monthName === 'January'
+      monthIndex = 1;
+      break;
+    }
+    case "February": {
+      monthIndex = 2;
+      break;
+    }
+    case "March":
+      monthIndex = 3;
+      break;
+    case "April":
+      monthIndex = 4;
+      break;
+  }
 
+  return monthIndex;
+};
 
+console.log(getMonthIndex("March"));
 
+const number = parseInt(prompt("Введите число между 0 и 3", ""));
 
+switch (number) {
+  case 0:
+    alert("Вы ввели число 0");
+    break;
+  case 1:
+    alert("Вы ввели число 1");
+    break;
 
+  case 2:
+  case 3:
+    alert("Вы ввели число 2 или 3");
+    break;
 
+  case NaN:
+    alert('Вы ввели не число')
+    break;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  default:
+    alert("Нету в списке");
+}
