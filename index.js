@@ -1,168 +1,71 @@
-/* 1 */
-const num = 2;
-const str = "3";
+// sayHello();
 
-const getSumOfTwo = function (num1, num2) {
-  // checks
-  if (isNaN(num1) || isNaN(num2)) {
-    return false;
-  }
+function sayHello(user = "Qwerty") {
+  const message = "Hello, " + user + "!";
+  alert(message);
+}
 
-  return Number(num1) + Number(num2);
-};
+let username = "Sveta";
+// sayHello(username);
 
-const result = getSumOfTwo(num, str);
+username = "John";
+// sayHello(username);
 
-console.log(result);
+username = "Ivan";
+// sayHello(username);
 
-/*  */
-
-/* 
-    1. Функцию которая возвращает максимальное число из двух
-    2. Функцию которая возвращает минимальное число из двух
-    3. Функция которая определяет является ли число четным
-
-    (4.*) Функция которая возвращает корень квадратного уравнения 
-    (метод дискриминанта)
-
-*/
-
-/* 1 */
-const getMaxOfTwo = function (num1, num2) {
-  if (isNaN(num1) || isNaN(num2)) {
-    return false;
-  }
-
-  return Math.max(num1, num2);
-
-  /* if(parseFloat(num1) > parseFloat(num2)) {
-        return num1;
-    }
-    
-    return num2; */
-};
-
-let res = getMaxOfTwo("35", "30");
-console.log(res);
-
-/* 2 */
-const getMinOfTwo = function (num1 = 1, num2 = 2) {
-  if (isNaN(num1) || isNaN(num2)) {
-    return false;
-  }
-
-  return Math.min(num1, num2);
-
-  /*  if(parseFloat(num2) > parseFloat(num1)) {
-        return num1;
-    }
-    
-    return num2; */
-};
-
-res = getMinOfTwo(6, 3);
-console.log(res);
-
-/* 3 */
-const isEven = function (number) {
-  if (isNaN(number)) {
-    return null;
-  }
-
-  return number % 2 === 0;
-};
-
-console.log(isEven(3));
-
-/* 4 */
-
-/** JSDOCs
- * Solves quadratic equations
- * @param {Number} a Coeff A
- * @param {Number} b Coeff B
- * @param {Number} c Coeff C
- * @returns {Number[]} Roots of quadratic equation
- */
-function solveQaudraticEquation(a, b, c) {
-    console.log(arguments)
-  // checks
-  // type
+function calcRectSquare(sideA, sideB) {
   if (
-    (typeof a !== "number" || typeof b !== "number" || typeof c !== "number") &&
-    (typeof a !== "string" || typeof b !== "string" || typeof c !== "string")
+    (typeof sideA !== "number" || typeof sideB !== "number") &&
+    (typeof sideA !== "string" || typeof sideB !== "string")
   ) {
     return null;
   }
 
-  if (isNaN(a) || isNaN(b) || isNaN(c)) {
-    // convert
+  if (isNaN(sideA) || isNaN(sideB)) {
     return null;
   }
 
-  const D = b * b - 4 * a * c;
-
-  //   debugger;
-
-  // if D > 0
-  const x1 = (-b + Math.pow(D, 1 / 2)) / (2 * a);
-  const x2 = (-b - Math.pow(D, 1 / 2)) / (2 * a);
-
-  return [x1, x2];
+  return sideA * sideB;
 }
 
-console.log("Ваш ответ " + solveQaudraticEquation(true, "0", "-3"));
+// console.log(calcRectSquare("4", "4"));
 
-let text = "Список\n";
-let nu1m = 1;
-text += nu1m + ". Пункт " + nu1m;
+/* 
+  Создайте функцию rgb(r, g, b), 
+  которая будет принимать три числовых аргумента
+  возвращать строку вида «rgb(23,100,134)». 
+  Если аргументы не заданы, 
+  считать их равными нулю. 
+  Не проверять переменные на тип данных
+*/
 
-console.log(text);
+function getRGB(r = 0, g = 0, b = 0) {
 
-const getMonthIndex = function (monthName) {
-  let monthIndex = 0;
+  const calc = "rgb(" + r + "," + g + "," + b + ")";
+  return calc;
+}
 
-  switch (monthName) {
-    case "January": {
-      // monthName === 'January'
-      monthIndex = 1;
-      break;
-    }
-    case "February": {
-      monthIndex = 2;
-      break;
-    }
-    case "March":
-      monthIndex = 3;
-      break;
-    case "April":
-      monthIndex = 4;
-      break;
+let red = 23;
+
+const result = getRGB(undefined, 100, undefined);
+console.log(result);
+
+
+
+function avg(num1, num2) {
+
+  // console.log(arguments[0], arguments[1]);
+  // console.log(num1, num2);
+
+  let sum = 0;
+
+  for (let index = 0; index < arguments.length; index += 2) {
+    sum = sum + arguments[index];
   }
 
-  return monthIndex;
-};
-
-console.log(getMonthIndex("March"));
-
-const number = parseInt(prompt("Введите число между 0 и 3", ""));
-
-switch (number) {
-  case 0:
-    alert("Вы ввели число 0");
-    break;
-  case 1:
-    alert("Вы ввели число 1");
-    break;
-
-  case 2:
-  case 3:
-    alert("Вы ввели число 2 или 3");
-    break;
-
-  case NaN:
-    alert('Вы ввели не число')
-    break;
-
-  default:
-    alert("Нету в списке");
+  return (sum) / arguments.length; // 10 / 2
 }
+
+const avgRes = avg(10, 3);
+console.log(avgRes);
