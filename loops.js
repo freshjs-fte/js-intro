@@ -10,21 +10,22 @@ function calcSomething(num1, num2) {
 }
 console.log(calcSomething(chislo1, chislo2));
 
-
+let buffer = 1;
 function calcFactorial(num) {
-    let buffer = 1;
-
+    
     for (let i = 1; i <= num; i++) {
-        buffer *= i
-    }
+        buffer *= i;
 
+        if(i < 3) {
+            break;
+        }
+    }
+    
     return buffer;
 }
 
 let resu = calcFactorial(5);
-
 console.log(resu);
-
 
 function calcPower(val, power) {
     

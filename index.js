@@ -48,10 +48,8 @@ function getRGB(r = 0, g = 0, b = 0) {
 
 let red = 23;
 
-const result = getRGB(undefined, 100, undefined);
-console.log(result);
-
-
+const rgbResult = getRGB(undefined, 100, undefined);
+console.log(rgbResult);
 
 function avg(num1, num2) {
 
